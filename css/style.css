@@ -6,12 +6,11 @@ html {
   
 html::before {
     content: "";
-    background-image: url("../static/img/background.png");
+    background-image: url("../static/img/background.jpeg");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-    filter: sepia(20%) opacity(70%); /* Сепия + прозрачность */
     position: absolute;
     top: 0;
     left: 0;
