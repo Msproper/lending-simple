@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700" rel="stylesheet">
     <title>Архитектурные решения</title>
 </head>
 <body>
@@ -19,7 +19,8 @@
         <!-- Слоган по центру -->
         <div class="slogan-container">
             <h1 class="slogan">
-                <strong>"Мы - геометрия будущего"</strong>
+                <span>«Мы реализуем</span>
+                <span><strong>любую</strong> вашу идею»</span>
             </h1>
         </div>
 
@@ -31,11 +32,15 @@
             </button>
             <button class="nav-button">
                 <img src="static/svg/architecture.svg" alt="icon">
-                <span>Проектирование</span></button>
-            <button class="nav-button">
+                <span>Проектирование</span>
+
+            </button>
+            <button onclick="window.location.href='static/pages/maf.html'" class="nav-button">
                 <img src="static/svg/factory.svg" alt="icon">
-                <span>Производство</span></button>
+                <span>Производство</span>
+            </button>
         </div>
     </div>
+    <script src="static/js/openButton.js"></script>
 </body>
 </html>
