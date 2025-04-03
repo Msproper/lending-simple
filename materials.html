@@ -5,8 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Промышленные решения | Порошковая покраска, Металлообработка, Вакуумная формовка</title>
   <link rel="stylesheet" href="css/maf.style.css">
+  <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
+  <header class="metal-header">
+    <a href="/" class="logo"> <!-- Обернули лого в ссылку -->
+      <img src="static/img/logo.png" alt="Логотип">
+      <span class="site-name">Mimar Qırım</span>
+    </a>
+    
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#" >Спецрешения</a></li>
+            <li><a href="#">Обработка</a></li>
+            <li><a class="active">Архитектура</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </nav>
+    
+    <div class="burger-menu" id="burger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
   <div class="page">
     <!-- Hero-блок -->
     <section class="hero">
@@ -89,5 +111,6 @@
         </div>
     </section>
   <script src="static/js/galary.js"></script>
+  <script src="static/js/burgerMenu.js"></script>
 </body>
 </html>

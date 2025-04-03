@@ -37,6 +37,35 @@ body {
     }
 }
 
+
+
+.logo-container {
+    display: flex;
+    align-items: center;  
+    gap: 15px;
+    padding: 1rem 5%;  
+    height: 100px;
+    animation: fadeInRight 1.8s 0.2s both;
+    
+    img {
+        background-color: #fff;
+        border-radius: 50%;  
+        height: 60px;  
+        width: 60px;  
+        object-fit: contain;  
+        padding: 5px;  // Добавил отступ внутри круга
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .site-name {
+        // Убрал padding-top, так как выравнивание по центру
+        font-weight: 600;
+        font-size: 1.8rem;  // Слегка уменьшил размер
+        color: $color-light;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.2);  // Легкая тень для текста
+        letter-spacing: 0.5px;  // Улучшенный кернинг
+    }
+}
 // Основная сетка
 .main-container {
     display: grid;
@@ -51,90 +80,118 @@ body {
     }
 }
 
-// Стили логотипа
-.logo-container {
-    display: flex;
-    align-items: top;
 
-    .logo {
-        width: 70px;
-        height: 70px;
-        background-color: $color-gray;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        font-size: 1.5rem;
-        color: $color-accent;
-        box-shadow: $shadow-default;
-
-        @media (max-width: 768px) {
-            width: 50px;
-            height: 50px;
-            font-size: 1rem;
-        }
-    }
-}
 
 // Стили слогана
 .slogan-container {
+    grid-column: 2;
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: top;
+    justify-content: flex-start;
     align-items: flex-end;
     padding-right: 3rem;
-    padding-top: 3rem;
+    padding-top: 0.3rem;
+    max-width: 100%; // Добавляем ограничение по ширине
+    box-sizing: border-box; // Учитываем padding в общей ширине
+
+
+    @media (max-width: 1300px) {
+        margin-bottom: 0;
+    }
 
     @media (max-width: 992px) {
+        grid-column: 1;
         align-items: center;
-        padding-right: 0;
-        padding-top: 1rem;
+        padding: 1rem;
         text-align: center;
     }
 
     .slogan {
         display: flex;
-        color: linear-gradient(275deg, #777777 0%, #ffffff 100%);
         flex-direction: column;
         font-weight: 300;
         width: 80%;
         line-height: 1.3;
         margin-bottom: 1.5rem;
-        font-size: 4.5rem;
         color: lighten($color-primary, 90%);
+        font-size: clamp(2rem, 5vw, 4.5rem);
+        position: relative;
+        
+        // Маска для эффекта волны
+        -webkit-mask-image: linear-gradient(
+            90deg,
+            transparent 0%,
+            #fff 20%,
+            #fff 80%,
+            transparent 100%
+        );
+        mask-image: linear-gradient(
+            90deg,
+            transparent 0%,
+            #fff 20%,
+            #fff 80%,
+            transparent 100%
+        );
+        -webkit-mask-size: 200% 100%;
+        mask-size: 200% 100%;
+        animation: waveLight 10s linear infinite;
 
-        span:nth-child(1){
-            color: lighten($color-gray, 50%);
-            display: inline-block;
-            text-align: left;
-            animation: showLine 1s ease-in-out 0.2s both;
+        span {
+            display: block;
+            width: 100%; 
+            box-sizing: border-box;
+            position: relative;
+            
+            &:nth-child(1) {
+                color: lighten($color-gray, 50%);
+                text-align: left;
+                animation: showLine 1s ease-in-out 0.2s both;
+            }
+
+            &:nth-child(2) {
+                color: lighten($color-gray, 40%);
+                text-align: right;
+                animation: showLine 1s ease-in-out 0.4s both;
+            }
         }
 
-        span:nth-child(2){
-            color: lighten($color-gray, 40%);
-            text-align: right;
-            display: inline-block;
-            animation: showLine 1s ease-in-out 0.4s both;
-        }
-
-        @media (max-width: 1200px) {
-            font-size: 3.5rem;
-        }
-
-        @media (max-width: 768px) {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        @media (max-width: 576px) {
-            font-size: 2rem;
+        @media (max-width: 992px) {
+            width: 100%;
+            span {
+                text-align: center !important;
+            }
         }
 
         strong {
             font-weight: 600;
+            position: relative;
+            
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(90deg, transparent, #fff, transparent);
+                transform: scaleX(0);
+                transform-origin: left;
+                animation: underlineWave 10s infinite;
+            }
         }
+    }
+}
+
+// Анимация волны света
+@keyframes waveLight {
+    0% {
+        -webkit-mask-position: -100% 0;
+        mask-position: -100% 0;
+    }
+    100% {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
     }
 }
 
@@ -317,3 +374,12 @@ body {
         }
     }
 }
+
+@keyframes gradient-border {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 400% 0;
+    }
+  }
