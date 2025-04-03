@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700" rel="stylesheet">
     <title>Архитектурные решения</title>
 </head>
-<body>
+<body id="main">
     <div class="main-container">
         <!-- Логотип слева -->
         <div class="logo-container">
@@ -28,19 +28,19 @@
         <div class="buttons-container">
             <button class="nav-button">
                 <img src="static/svg/column.svg" alt="icon">
-                <span>Малые Архитектурные Формы</span>
+                <span>Спецрешения</span>
             </button>
             <button class="nav-button">
                 <img src="static/svg/architecture.svg" alt="icon">
                 <span>Проектирование</span>
 
             </button>
-            <button onclick="window.location.href='static/pages/maf.html'" class="nav-button">
+            <button onclick="window.location.href='/materials'" class="nav-button">
                 <img src="static/svg/factory.svg" alt="icon">
-                <span>Производство</span>
+                <span>Обработка материалов</span>
             </button>
         </div>
     </div>
-    <script src="static/js/openButton.js"></script>
+    <script src="static/js/routes.js"></script>
 </body>
 </html>
