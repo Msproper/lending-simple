@@ -4,8 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Промышленные решения | Порошковая покраска, Металлообработка, Вакуумная формовка</title>
-  <link rel="stylesheet" href="css/maf.style.css">
+  <link rel="stylesheet" href="css/materials.style.css">
   <link rel="stylesheet" href="css/header.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Подключение Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- Подключение Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </head>
 <body>
   <header class="metal-header">
@@ -17,8 +24,8 @@
     <nav id="main-nav">
         <ul>
             <li><a href="#" >Спецрешения</a></li>
-            <li><a href="#">Обработка</a></li>
-            <li><a class="active">Архитектура</a></li>
+            <li><a class="active">Обработка</a></li>
+            <li><a href="architecture">Архитектура</a></li>
             <li><a href="#">Контакты</a></li>
         </ul>
     </nav>
@@ -45,7 +52,7 @@
           <p>Создаём сложные 3D-формы из пластика для медицины, рекламы и промышленности. Толщина материала: 0.5–15 мм.</p>
           <div class="media-placeholder">
             <!-- Здесь будет GIF/фото (например, процесс формовки) -->
-            <img src="https://androidinsider.ru/wp-content/uploads/2024/06/top_items_aliexpress-750x559.jpg" alt="Вакуумная формовка">
+            <img src="static/img/formovka.jpg" alt="Вакуумная формовка">
           </div>
         </div>
       </div>
@@ -56,49 +63,115 @@
           <h2>Порошковая покраска</h2>
           <p>Износостойкое покрытие любого цвета по RAL. Защита от коррозии, ровный слой без подтёков.</p>
           <div class="media-placeholder">
-            <img src="https://androidinsider.ru/wp-content/uploads/2024/06/top_items_aliexpress-750x559.jpg" alt="Порошковая покраска">
+            <img src="static/img/kraska_1.jpg" alt="Порошковая покраска">
           </div>
         </div>
       </div>
 
       <!-- Блок 3: Металлообработка -->
       <div class="service-block block-3">
-        <div class="content">
-          <h2>Металлообработка</h2>
-          <p>Лазерная резка, гибка, сварка. Допуск ±0.1 мм. Работаем с сталью, алюминием, нержавейкой.</p>
-          <div class="media-placeholder">
-            <img src="https://androidinsider.ru/wp-content/uploads/2024/06/top_items_aliexpress-750x559.jpg" alt="Металлообработка">
+
+        <section class="metal-works">
+          <div class="section-header">
+            <h2>Работы по металлу</h2>
+            <p>Профессиональное исполнение любых задач по обработке металла</p>
+          </div>
+          
+          <div class="works-container">
+            <!-- Карточка 1 - Гибка -->
+            <div class="work-card">
+              <div class="work-card-image">
+                <video controls autoplay muted loop>
+                  <source src="static/gif/gibka.mp4" type="video/mp4">
+                  Ваш браузер не поддерживает HTML5 видео.
+                </video>
+              </div>
+              <div class="work-card-content">
+                <h3>Гибка металла</h3>
+                <p>Точная гибка листового металла и труб по индивидуальным параметрам</p>
+              </div>
+            </div>
+            
+            <!-- Карточка 2 - Резка -->
+            <div class="work-card">
+              <div class="work-card-image">
+                <video controls autoplay muted loop>
+                  <source src="static/gif/rezka.mp4" type="video/mp4">
+                  Ваш браузер не поддерживает HTML5 видео.
+                </video>
+              </div>
+              <div class="work-card-content">
+                <h3>Резка металла</h3>
+                <p>Чистая и точная резка любых металлов с использованием современного оборудования</p>
+              </div>
+            </div>
+            
+            <!-- Карточка 3 - Сварка -->
+            <div class="work-card">
+              <div class="work-card-image">
+                <img src="static/img/svarka.jpg" alt="Сварка металла">
+              </div>
+              <div class="work-card-content">
+                <h3>Сварка металла</h3>
+                <p>Качественные сварочные работы различных типов и сложности</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+        <!-- Блок 2: Порошковая покраска -->
+        <div class="service-block block-2">
+          <div class="content">
+            <h2>Фрезеровка и раскрой</h2>
+            <p>Мы выполняем фрезеровку и раскрой различных материалов с высокой точностью на современном оборудовании. Работаем с металлом, пенопластом и другими материалами, обеспечивая качество и соблюдение сроков.</p>
+            <div class="media-placeholder">
+              <div class="video">
+                <video controls autoplay muted>
+                    <source src="static/gif/frezer.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает HTML5 видео.
+                </video>
+            </div>
+            </div>
           </div>
         </div>
+    </section>
+
+
+
+    <section class="gallery">
+      <h2>Наши работы</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- Слайды -->
+          <div class="swiper-slide">
+            <img src="static/img/mat_carusel_1.jpg" alt="Пример работы 1">
+          </div>
+          <div class="swiper-slide">
+            <img src="static/img/mat_carusel_2.jpg" alt="Пример работы 2">
+          </div>
+          <div class="swiper-slide">
+            <img src="static/img/mat_carusel_3.jpg" alt="Пример работы 2">
+          </div>
+          <div class="swiper-slide">
+            <img src="static/img/mat_carusel_4.jpg" alt="Пример работы 2">
+          </div>
+          <div class="swiper-slide">
+            <img src="static/img/mat_carusel_5.jpg" alt="Пример работы 2">
+          </div>
+          <div class="swiper-slide">
+            <img src="static/img/mat_carusel_6.jpg" alt="Пример работы 2">
+          </div>
+          <!-- Добавьте больше слайдов по необходимости -->
+        </div>
+        <!-- Навигационные кнопки -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Пагинация -->
+        <div class="swiper-pagination"></div>
       </div>
     </section>
 
-        <!-- Галерея работ -->
-    <section class="gallery service-block block-1" >
-        <h2>Наши работы</h2>
-        <div class="gallery-container">
-        <button class="arrow prev">&#10094;</button>
-        <div class="carousel">
-            <div class="carousel-track">
-            <div class="carousel-slide">
-                <img src="https://androidinsider.ru/wp-content/uploads/2024/06/top_items_aliexpress-750x559.jpg" alt="Проект 1">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://androidinsider.ru/wp-content/uploads/2024/06/top_items_aliexpress-750x559.jpg" alt="Проект 2">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://androidinsider.ru/wp-content/uploads/2024/06/top_items_aliexpress-750x559.jpg" alt="Проект 3">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://androidinsider.ru/wp-content/uploads/2024/06/top_items_aliexpress-750x559.jpg" alt="Проект 4">
-            </div>
-            </div>
-        </div>
-        <button class="arrow next">&#10095;</button>
-        </div>
-    </section>
 
-    <!-- CTA-блок -->
     <section class="cta">
         <h2>Готовы к сотрудничеству?</h2>
         <div class="contact-options">
@@ -110,7 +183,8 @@
         <button class="cta-button">Отправить запрос</button>
         </div>
     </section>
-  <script src="static/js/galary.js"></script>
+
   <script src="static/js/burgerMenu.js"></script>
+  <script src="static/js/galary.js"></script>
 </body>
 </html>
