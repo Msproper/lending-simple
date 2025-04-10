@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спецзаказы | Наши проекты</title>
+    <link rel="stylesheet" href="css/special.style.css">
+    <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+    <header class="metal-header">
+        <a href="/" class="logo"> <!-- Обернули лого в ссылку -->
+          <img src="static/img/logo.png" alt="Логотип">
+          <span class="site-name">Mimar Qırım</span>
+        </a>
+        
+        <nav id="main-nav">
+            <ul>
+                <li><a class="active" >Спецрешения</a></li>
+                <li><a href="/materials.html">Обработка</a></li>
+                <li><a href="/architecture.html">Архитектура</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+        
+        <div class="burger-menu" id="burger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <header class="header">
+        <h1>Спецзаказы</h1>
+        <p>Реализуем нестандартные проекты любой сложности</p>
+    </header>
+
+    <section class="projects">
+        <div class="project-card">
+            <img src="static/img/svarka.jpg" alt="Литье бетона">
+            <h3>Литье бетона</h3>
+            <p>Изготовление сложных бетонных конструкций по индивидуальным чертежам.</p>
+        </div>
+
+        <div class="project-card">
+            <img src="static/img/pricep.jpg" alt="Ремонт прицепа фуры">
+            <h3>Ремонт прицепа фуры</h3>
+            <p>Восстановление и усиление конструкции грузового прицепа.</p>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Готовы к новым вызовам</h2>
+        <p>Если у вас нестандартная задача — мы найдем решение.</p>
+        <a href="tel:+79991234567" class="phone">+7 (999) 123-45-67</a>
+    </section>
+
+    <form class="contact-form">
+        <h2>Оставить заявку</h2>
+        <input type="text" placeholder="Ваше имя" required>
+        <input type="tel" placeholder="Телефон" required>
+        <textarea placeholder="Описание задачи"></textarea>
+        <button type="submit">Отправить</button>
+    </form>
+    <script src="static/js/burgerMenu.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
