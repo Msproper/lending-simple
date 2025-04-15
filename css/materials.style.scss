@@ -103,9 +103,10 @@ body {
       
       @media (min-width: 768px) {
         flex-direction: row;
+        text-align: center;
         align-items: center;
         gap: 50px;
-        padding: 0 40px;
+        padding: 10px 20px;
       }
 
       .text {
@@ -133,13 +134,19 @@ body {
         width: 45%;
         position: relative;
         
-        @media (min-width: 768px) {
-          min-width: 50%;
+        @media (max-width: 768px) {
+          width: 100%; // Растягиваем на всю ширину
+          max-width: 100%;
+          
+          img {
+            max-width: 100%; // Убираем ограничение по ширине
+          }
         }
 
+
         img {
-          width: 100%;
-          max-width: 600px;
+          height: auto; // Сохраняем пропорции
+          max-width: 500px;
           border-radius: 8px;
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
           transition: transform 0.3s;
@@ -218,6 +225,8 @@ body {
     }
     
     @media (max-width: 768px) {
+
+
       width: 250px;
       height: 250px;
     }
@@ -519,5 +528,11 @@ body {
 
   @media (max-width: 768px) {
     margin-top: 30px;
+  }
+}
+
+@media (max-width:768px){
+  .media-placeholder{
+    width: 100%;
   }
 }

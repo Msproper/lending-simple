@@ -186,6 +186,12 @@ body {
   color: #333;
   align-items: flex-end;
 }
+@media (max-width: 768px) {
+  .white {
+    align-items: center;
+    text-align: center;
+  }
+}
 .white .video {
   display: flex;
   flex-direction: row-reverse;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,6 +8,7 @@ body {
 }
 
 .header {
+  margin-top: 60px;
   text-align: center;
   padding: 3rem 1rem;
   background: #f4f4f4;
@@ -84,4 +86,286 @@ body {
 }
 .contact-form button:hover {
   background: #0055aa;
+}
+
+.projects {
+  background: #000;
+  color: #fff;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.projects .intro {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+.projects .intro h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.projects .intro p {
+  color: #aaa;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 320px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+.project-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.project-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.project-card h3 {
+  padding: 0 1rem;
+  margin-top: 1rem;
+  color: #ddd;
+}
+
+.project-card p {
+  padding: 0 1rem 1rem;
+  color: #aaa;
+}
+
+.project-card .icon {
+  text-align: center;
+  padding: 1rem 0 0;
+  color: #666;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.intro-hero {
+  position: relative;
+  height: 90vh;
+  background: url("../static/img/industrial-bg.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+}
+
+.intro-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  animation: bgPulse 10s infinite ease-in-out;
+  z-index: 1;
+}
+
+.intro-hero .content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem;
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+.intro-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.intro-hero p {
+  font-size: 1.3rem;
+  color: #ccc;
+}
+
+@keyframes bgPulse {
+  0% {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  50% {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.project-card {
+  animation: zoomIn 0.6s ease-out forwards;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+.intro-hero .svg {
+  position: absolute;
+  width: 240px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+@media (max-width: 1200px) {
+  .intro-hero .svg {
+    width: 220px;
+  }
+}
+@media (max-width: 992px) {
+  .intro-hero .svg {
+    width: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .intro-hero .svg {
+    width: 180px;
+  }
+}
+@media (max-width: 480px) {
+  .intro-hero .svg {
+    width: 160px;
+  }
+}
+
+/* Распределение по фону */
+.anvil {
+  top: 20%;
+  left: 15%;
+}
+
+.gear {
+  top: 20%;
+  right: 10%;
+}
+
+.saw {
+  bottom: 15%;
+  left: 10%;
+}
+
+.iron {
+  bottom: 10%;
+  right: 15%;
+}
+
+.hammer {
+  top: 5%;
+  left: 10%;
+}
+
+/* Анимации */
+.hammer {
+  animation: hammerStrike 2s infinite ease-in-out;
+  transform-origin: bottom center;
+}
+
+.gear {
+  animation: gearSpin 6s linear infinite;
+  transform-origin: center;
+}
+
+.saw {
+  animation: sawMove 2s ease-in-out infinite;
+}
+
+.iron {
+  animation: ironGlide 3s cubic-bezier(0.6, 0.04, 0.4, 1) infinite;
+}
+
+.anvil {
+  animation: anvilShake 5s infinite ease-in-out;
+  transform-origin: center;
+}
+
+/* Ключевые кадры */
+@keyframes hammerStrike {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(25deg);
+  }
+}
+@keyframes gearSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes sawMove {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(25px) translateY(-25px);
+  }
+}
+@keyframes ironGlide {
+  0% {
+    transform: translateX(0px);
+  }
+  90% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes anvilShake {
+  0%, 100% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translateY(1px);
+  }
 }/*# sourceMappingURL=special.style.css.map */
