@@ -26,14 +26,14 @@ body {
   padding: 2rem;
 }
 .projects .project-card {
-  max-width: 300px;
+  max-width: 400px;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
 }
 .projects .project-card img {
   width: 100%;
-  height: auto;
+  height: 500px;
 }
 .projects .project-card h3 {
   padding: 0 1rem;
@@ -161,6 +161,7 @@ body {
   color: #666;
 }
 
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -213,7 +214,7 @@ body {
 
 .intro-hero p {
   font-size: 1.3rem;
-  color: #ccc;
+  color: #eeeeee;
 }
 
 @keyframes bgPulse {
@@ -254,6 +255,8 @@ body {
   opacity: 0.6;
   pointer-events: none;
 }
+
+
 @media (max-width: 1200px) {
   .intro-hero .svg {
     width: 220px;

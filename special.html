@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="metal-header">
-        <a href="/" class="logo"> <!-- Обернули лого в ссылку -->
+        <a href="./index.html" class="logo"> <!-- Обернули лого в ссылку -->
           <img src="static/img/logo.png" alt="Логотип">
           <span class="site-name">Mimar Qırım</span>
         </a>
@@ -17,9 +17,8 @@
         <nav id="main-nav">
             <ul>
                 <li><a class="active" >Спецрешения</a></li>
-                <li><a href="/materials.html">Обработка</a></li>
-                <li><a href="/architecture.html">Архитектура</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="./materials.html">Обработка</a></li>
+                <li><a href="./architecture.html">Архитектура</a></li>
             </ul>
         </nav>
         
@@ -54,37 +53,23 @@
         </div>
     
         <div class="project-card">
-            <div class="icon">
-                <!-- SVG иконка сварки -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-            </div>
-            <img src="static/img/mat_carusel_2.jpg" alt="Литье бетона">
+            <img src="static/img/mat_carusel_2-.jpg" alt="Литье бетона">
             <h3>Литье бетона</h3>
             <p>Изготовление бетонных конструкций по техническому заданию заказчика.</p>
         </div>
     
         <div class="project-card">
-            <div class="icon">
-                <!-- SVG иконка инструмента -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 010 5.656l-1.414 1.414a4 4 0 01-5.656-5.656l1.414-1.414m6.364 0a4 4 0 00-5.656-5.656l-1.414 1.414" />
-                </svg>
-            </div>
-            <img src="static/img/pricep.jpg" alt="Ремонт прицепа фуры">
-            <h3>Металл - легко</h3>
+            <img src="static/img/pricep-.jpg" alt="Ремонт прицепа фуры">
+            <h3>Металл? - легко</h3>
             <p>Работы с металлами любой сложности </p>
         </div>
+        
+        <div class="project-card">
+            <img src="static/img/maf_park.jpg" alt="Ремонт прицепа фуры">
+            <h3>Архитектурные решения</h3>
+            <p>Превратим ваш сад, парк или участок в уютное и комфортое место для отдыха</p>
+        </div>
     </section>
-    
-    <form class="contact-form">
-        <h2>Оставить заявку</h2>
-        <input type="text" placeholder="Ваше имя" required>
-        <input type="tel" placeholder="Телефон" required>
-        <textarea placeholder="Описание задачи"></textarea>
-        <button type="submit">Отправить</button>
-    </form>
     <script src="static/js/burgerMenu.js"></script>
     <script src="script.js"></script>
 </body>
